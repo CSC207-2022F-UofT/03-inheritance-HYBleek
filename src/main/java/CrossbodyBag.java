@@ -35,10 +35,6 @@ public class CrossbodyBag extends Bag{
     int numberOfStraps;
 
     public CrossbodyBag(String color, int capacity, int num_straps) {
-        /**
-         * This is how we call the parent's constructor
-         * The Python equivalent is super().__init__(...)
-         */
         super(color, capacity);
         this.numberOfStraps = num_straps;
     }
@@ -47,10 +43,12 @@ public class CrossbodyBag extends Bag{
         return numberOfStraps;
     }
 
+    @Override
     public void enhance() {
         super.increaseCapacity(2);
     }
 
+    @Override
     public String toString() {
         return  this.getColor() + " Crossbody Bag with " + this.getNumberOfStraps() + " straps (" +
                 this.getNumberOfContents() + " / " +  this.getCapacity() + ")";
